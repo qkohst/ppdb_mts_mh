@@ -37,9 +37,6 @@
         <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
         MTs. Manba'ul Huda
       </a>
-      <!-- <a href="index.html" class="logo"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a>
-      <h1 class="logo mr-auto"><a href="index.html">MTs. MH</a></h1> -->
-      <!-- Uncomment below if you prefer to use an image logo -->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>

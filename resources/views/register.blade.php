@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - eNno Bootstrap Template</title>
+  <title>MTs. Manba'ul Huda | Register</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,12 +26,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: eNno - v2.2.0
-  * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -40,40 +34,17 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">eNno</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a class="navbar-brand mr-auto" href="#">
+        <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        MTs. Manba'ul Huda
+      </a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">Login Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
-
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
 
     </div>
   </header><!-- End Header -->
@@ -84,63 +55,195 @@
     <section class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
-          </ol>
+        <div class="section-title">
+          <span>Formulir Pendaftaran</span>
+          <h2>Formulir Pendaftaran</h2>
+          <p>Formulir PPDB (Pendadfataran Peserta Didik Baru) MTs. Manba'ul Huda</p>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
     </section>
+    <!-- End Breadcrumbs -->
+    <div class="container">
+      @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true">Peserta Didik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false">Ayah</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-above-messages-tab" data-toggle="pill" href="#custom-content-above-messages" role="tab" aria-controls="custom-content-above-messages" aria-selected="false">Ibu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-above-settings-tab" data-toggle="pill" href="#custom-content-above-settings" role="tab" aria-controls="custom-content-above-settings" aria-selected="false">Wali</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="custom-content-above-tabContent">
+          <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Lengkap">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>-- Pilih Jenis Kelamin --</option>
+                    <option>Laki-Laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Tempat, Tanggal Lahir</label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control" placeholder="Tempat Lahir">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Alamat</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Lengkap">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>-- Pilih Jenis Kelamin --</option>
+                    <option>Laki-Laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Tempat, Tanggal Lahir</label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control" placeholder="Tempat Lahir">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Alamat</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="custom-content-above-messages" role="tabpanel" aria-labelledby="custom-content-above-messages-tab">
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Lengkap">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>-- Pilih Jenis Kelamin --</option>
+                    <option>Laki-Laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Tempat, Tanggal Lahir</label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control" placeholder="Tempat Lahir">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Alamat</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="custom-content-above-settings" role="tabpanel" aria-labelledby="custom-content-above-settings-tab">
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Lengkap">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>-- Pilih Jenis Kelamin --</option>
+                    <option>Laki-Laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Tempat, Tanggal Lahir</label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control" placeholder="Tempat Lahir">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Alamat</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <button href="#custom-content-above-profile" class="btn btn-success">Kirim Data</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <div class="footer-top">
-
-      <div class="container">
-
-        <div class="row  justify-content-center">
-          <div class="col-lg-6">
-            <h3>eNno</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-          </div>
-        </div>
-
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>eNno</span></strong>. All Rights Reserved
+        MTs. Manba'ul Huda | <strong><span>2020</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
